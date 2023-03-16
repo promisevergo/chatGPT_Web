@@ -38,4 +38,4 @@ python chatGPT_Web.py
 gunicorn chatGPT_Web:app -c gunicorn_config.py
 ```
 #### 打开浏览器，输入显示的ip及端口，比如：“127.0.0.1:5000"，就可以看到对话的网页
-![chat][https://github.com/promisevergo/chatGPT_Web/blob/main/chat.png]
+![chat]（https://github.com/promisevergo/chatGPT_Web/blob/main/chat.gif）
