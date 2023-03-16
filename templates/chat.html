@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--自适应屏幕大小-->
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="使用官方ChatGPT API实现简单HTML网页版在线聊天（支持markdown语法及查看对话记录）"/>
+<head>
+    <meta charset="UTF-8">
+    <title>OpenAI</title>
+    <link rel="shortcut icon" href="https://chat.openai.com/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div align="center">
+    <div class="chat_window">
+        <div class="top_menu">
+            <div class="buttons">
+                <div class="button close"></div>
+                <div class="button minimize"></div>
+                <div class="button maximize"></div>
+            </div>
+            <div id="title" class="title" style="display:boock">ChatGPT</div>
+            <div id="loading" class="alert_title" style="display:none">处理中, 请勿重复提交</div>
+        </div>
+        <!-- <div id="loading" style="display:none; color:red"><b>后端正在处理，请稍等，切勿重复提交</b></div> -->
+        <ul class="messages" id="chatbox">
+            <div style="text-align: left; color: green">
+                <pre style="white-space: pre-wrap; word-wrap: break-word;" id="chatlog"></pre>
+            </div>
+        </ul>
+        <div class="bottom_wrapper clearfix">
+            <textarea class="message_input_wrapper" placeholder="" id="chatinput"></textarea>
+            <button class="send_message" id="sendbutton">提交</button>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
