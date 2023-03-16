@@ -1,10 +1,8 @@
 # chatGPT_Web 私有化部署
 ### 使用gpt-3.5-turbo 模型的api，支持markdown和连续对话，使用flask实现SSE服务推送流式文本，实现与官网类似的对话效果。
 > 项目基于其他两个项目开源项目的实现，在此感谢两个项目的作者 
-
-> 修改[acheong08](https://github.com/acheong08/ChatGPT)的V3.py对接官方api的接口 
-
-> 参考[slippersheepig](https://github.com/slippersheepig/chatgpt-web)的网页端代码
+>> 修改[acheong08](https://github.com/acheong08/ChatGPT)的V3.py对接官方api的接口 
+>> 参考[slippersheepig](https://github.com/slippersheepig/chatgpt-web)的网页端代码
 
 # 部署方法
 ## 安装依赖
@@ -38,4 +36,4 @@ python chatGPT_Web.py
 gunicorn chatGPT_Web:app -c gunicorn_config.py
 ```
 #### 打开浏览器，输入显示的ip及端口，比如：“127.0.0.1:5000"，就可以看到对话的网页
-![chat]（https://github.com/promisevergo/chatGPT_Web/blob/main/chat.gif）
+![chat](https://github.com/promisevergo/chatGPT_Web/blob/main/chat.gif)
