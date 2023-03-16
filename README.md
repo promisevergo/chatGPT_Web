@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```python
 config = {
     "key": "your openai key",
-    'proxy': 'you proxy or None',
+    'proxy': 'you proxy or None',   #like "http:127.0.0.1:7890"
     'ip': '127.0.0.1',              # "127.0.0.1" or your server's internal network ip or your server's public ip
     'port': 5000,
 }
