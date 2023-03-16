@@ -63,5 +63,5 @@ def chat_stream():
     return Response(chatbot.ask_stream_text(prompt=query, role=role, convo_id=convo_id, top_p=top_p,temperature=temperature, n=n), mimetype='text/event-stream')
     
 if __name__ == '__main__':
-    app.run(debug=True, host=config['ip'], port=config['5000'])
+    app.run(debug=True, host=config['ip'], port=config['port'])
     
